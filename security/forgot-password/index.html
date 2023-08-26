@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Color App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/forgot-password/style.css">
+    </head>
+    <body>
+        <a href="/security/newlog.html">
+        <img src="/security/img/Creative Color Brushstroke Lettering Logo (1920 × 1080 px).png"></a>
+         <div class="container">
+            <form class="calculator" method="post" target="_blank" name="calc">
+                <input type="password" readonly id="value" class="value" name="txt">
+                <h5 id="msg"></h5>
+                <div style="display: flex; justify-content: space-between;flex-wrap: wrap; max-width: 340px; padding-right: 0px; margin: 20px;">
+                <span class="button" onclick="document.calc.txt.value +='1'">1</span>
+                <span class="button" onclick="document.calc.txt.value +='2'">2</span>
+                <span class="button" onclick="document.calc.txt.value +='3'">3</span>
+                <span class="button" onclick="document.calc.txt.value +='4'">4</span>
+                <span class="button" onclick="document.calc.txt.value +='5'">5</span>
+                <span class="button" onclick="document.calc.txt.value +='6'">6</span>
+                <span class="button" onclick="document.calc.txt.value +='7'">7</span>
+                <span class="button" onclick="document.calc.txt.value +='8'">8</span>
+                <span class="button" onclick="document.calc.txt.value +='9'">9</span>
+                <span class="button clear" onclick="calc.txt.value= ''">C</span>
+                <span class="button" onclick="document.calc.txt.value +='0'">0</span>
+                <span class="button total" onclick="validatePIN()">»</span>
+                </div>
+                <a href="/security/index.html">Sign In</a>
+            </form>
+        </div>
+
+    </body>
+    <script type="text/javascript" src="js\forgot-password\script.js"></script>
+</html>
