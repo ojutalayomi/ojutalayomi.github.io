@@ -6,7 +6,7 @@ body {
     display: flex;
     font-family: "Sofia", sans-serif;
     margin: auto;
-    background:url(https://ayocodex.site/wuramide/img/Wallpaper3.svg) fixed; 
+    background:url(/wuramide/img/Wallpaper3.svg) fixed; 
     background-size: cover;
     box-sizing: border-box;
     overflow: hidden;
