@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@font-face {
+    font-family: myFirstFont;
+    src: url(/Exo2-Regular.ttf);
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
-    font-family: 'Montserrat', sans-serif;
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: myFirstFont;
     overflow: hidden;
-    background: #90ee90;
+    background: #15202b;
     flex-direction: column;
 }
 body::before{
@@ -38,7 +41,6 @@ body::after{
     z-index: -2;
 }
 .container{
-    background: #eee;
     position: relative;
     overflow: hidden;
     width: 320px;
@@ -68,7 +70,7 @@ body::after{
     outline: none;
     padding: 10px;
     font-size: 80px;
-    letter-spacing: 15px;
+    letter-spacing: 20px;
     background: transparent;
     color: #fff;
 }
@@ -120,8 +122,10 @@ a{
 h5{
     text-align: center;
     color: #fff;
+    letter-spacing: 2px;
 }
 img{
+    display: block;
     width: 334px;
     height: 94px;
     position: relative;
@@ -129,20 +133,60 @@ img{
 }
 @media screen and (max-width: 750px) {
     body {
-      background-color: lightgreen;
+      background-color: #15202b;
     }
     .container .calculator span{
         cursor: none;
         transition: 0s;
     }
+  }  
+@media screen and (min-width: 800px) {
+    body{
+        background: linear-gradient(rgb(23, 33, 43, .95),rgb(22, 33, 44, .95)),url(/ColorApp.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        width: 1000px;
+        height: 250px;
+        min-width: 750px;
+        display: block;
+        border: 0.5px solid rgba(0, 0, 0, 0.287);
+    }
+    .calculator span{
+        display: none !important;
+    }
+    .container .calculator .value{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        border: 1px solid #15202b;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 80px;
+        letter-spacing: 15px;
+        background: transparent;
+    }
+    h5{
+        margin-top: 20px;
+        font-size: medium;
+    }
+    img{
+        display: none;
+        width: 350px;
+        height: 200px;
+        margin-bottom: 10px;
+    }
   }
+    
  
  a{
     text-decoration: none;
     color: #fff;
     text-align: center;
     cursor: pointer;
-    font: 15px sans-serif;
+    font-size: 15px;
  }
  a:hover{
     text-decoration: underline;

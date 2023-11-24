@@ -3,7 +3,7 @@ var span = document.querySelectorAll(".button");
 //var pin = pi.value;
 /*function validatePIN (pin) {
   
-    var reg = /^\d{4,6}\b/g
+    var reg = /^\d{4,6}$/
   
     
     if(pin.length == 4 || pin.length == 6){
@@ -17,21 +17,24 @@ var span = document.querySelectorAll(".button");
   console.log(validatePIN("12345"))// === false
   console.log(validatePIN("123456"))// === true
 */
-  function validatePIN(pin){
-var pin = document.getElementById('value').value;
-//var mobileNumber = document.getElementById('number').value;
- pinRegexPattern = /^\d{4}\b/g;
- mobRegexPattern = /^\d{3}\d{3}\d{4}$/;
-if(pin.match(pinRegexPattern) || pin.length == 6){
- console.log("Pin is Validated!");
+  function validatePIN(){
+var pin = pi.value;
+var mob = document.querySelector('h5');
+ pinRegexPattern = /^\d{4}$/;
+ mobRegexPattern = /^\d{6}$/;
+if(pin.match(pinRegexPattern) || pin.match(mobRegexPattern)){
  console.log(pin);
- window.location.href ="/web/index.html";
- span[11].style.color ="#fff";
+ //window.location.href ="/web/index.html";
+ mob.innerText = "Pin is Validated";
+ pi.style.borderColor = "green";
  return true;
- } else {
-   console.log("You have entered an invalid Pin!");
-   span[11].style.color ="#ffffff67";
-   pi.style.className += "error"
+ } else if(pin.length == 0) {
+  mob.innerText = "Please fill in your pin";
+  pi.style.borderColor = "#15202b";
+  return false;
+ }else {
+   mob.innerText = "You have entered an invalid Pin!";
+   pi.style.borderColor = "red";
    return false;
  }
 }
@@ -39,6 +42,7 @@ if(pin.match(pinRegexPattern) || pin.length == 6){
 let txt = "Please fill in your pin";
 let msg = document.getElementById("msg");
 let i = 0;
+
 let typing = () =>{
   if(i < txt.length){
     setInterval(
